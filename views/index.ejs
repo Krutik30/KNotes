@@ -1,0 +1,21 @@
+<div class="note_container">
+    <div class="flex">
+        <% data.forEach(props => { %>
+            <div className="notebox">
+                <p className="index"><%= props.id + 1 %></p>
+                <h2 className="nH"><%= props.title %></h2>
+                <p className="nP"><%= props.content %></p>
+                <button
+                    type="button" 
+                    className="b3 btn btn-danger"
+                    onClick={handleClick}
+                >Delete</button>
+              </div>
+        <% }) %>
+    </div>
+    <div>
+        <form action="/makeNote" method="get">
+            <button type="submit" class="new" value="+">+</button>
+        </form>
+    </div>
+</div>
